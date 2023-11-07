@@ -230,28 +230,21 @@
     </section><!-- End Services Section -->
     <!-- ======= Team Section ======= -->
     <section id="gtk" class="team section-bg">
-      <div class="container">
-
+    
         <div class="section-title">
           <span>Guru & Tenaga Kependidikan</span>
           <h2>Guru & Tenaga Kependidikan</h2>
         </div>
+        <div class="slide-container" style="display: flex; flex-wrap: nowrap; overflow-x: auto;">
+    <div class="slide-content" style="display: flex; flex-direction: row; margin-left:100px">
 
-        <div class="row">
+        
           @foreach($gurutendik as $gtk)
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="{{URL::to('/')}}/foto_gurutendik/{{$gtk->foto}}" alt="">
+          <div class="card m-2" style="width: 24rem;">
+              <img src="{{URL::to('/')}}/foto_gurutendik/{{$gtk->foto}}" alt="Gambar" style="width: auto; height: 300px;">
+              <div class="card-body">
               <h4>{{$gtk->nama}}</h4>
               <span>{{$gtk->jabatan}}</span>
-              <p>
-                {{$gtk->motto}}
-              </p>
-              <div class="social">
-                <a><i class="icofont-twitter"> {{$gtk->twitter}}</i></a>
-                <a><i class="icofont-facebook"> {{$gtk->facebook}}</i></a>
-                <a><i class="icofont-instagram"> {{$gtk->instagram}}</i></a>
-              </div>
             </div>
           </div>
           @endforeach
