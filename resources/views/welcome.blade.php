@@ -207,8 +207,8 @@
       <div class="container">
 
         <div class="section-title">
-          <span>Ekskul</span>
-          <h2>Ekskul</h2>
+          <span>Ekstrakulikuler</span>
+          <h2>Ekstrakulikuler</h2>
           <p>Untuk mengembangkan minat dan bakat siswa di {{$profile_madrasah->nama}} terdapat beberapa kegiatan ekstrakulikuler, diantaraya :</p>
         </div>
 
