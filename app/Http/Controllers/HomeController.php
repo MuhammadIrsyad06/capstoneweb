@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\ProfileMadrasah;
+use App\Profile;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $madrasah = ProfileMadrasah::first();
-        return view('home', compact('madrasah'));
+        $sekolah = Profile::first();
+        return view('home', compact('sekolah'));
     }
 }

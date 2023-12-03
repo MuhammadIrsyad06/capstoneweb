@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>{{$madrasah->nama}} | Admin</title>
+    <title>{{$sekolah->nama}} | Admin</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -37,8 +37,8 @@
         <div class="container d-flex align-items-center">
 
             <a class="navbar-brand mr-auto" href="#">
-                <img src="{{URL::to('/')}}/logo_madrasah/{{$madrasah->logo}}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-                {{$madrasah->nama}}
+                <img src="{{URL::to('/')}}/logo/{{$sekolah->logo}}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                {{$sekolah->nama}}
             </a>
 
             <nav class="nav-menu d-none d-lg-block">
@@ -46,7 +46,7 @@
                     <li><a href="{{ route('home') }}">Dashboard</a></li>
                     <li class="drop-down"><a href="#">Data Master</a>
                         <ul>
-                            <li><a class="dropdown-item" href="{{ route('profilemadrasah.index') }}">Profile Madrasah</a></li>
+                            <li><a class="dropdown-item" href="{{ route('profile.index') }}">Profile Sekolah</a></li>
                             <li><a class="dropdown-item" href="{{ route('ekstrakulikuler.index') }}">Ekstrakulikuler</a></li>
                             <li><a class="dropdown-item" href="{{ route('gurutendik.index') }}">Guru & Tenaga Kependidikan</a></li>
                             <li><a class="dropdown-item" href="{{ route('contact.index') }}">Contact</a></li>
@@ -90,7 +90,7 @@
     <footer id="footer">
         <div class="container footer-bottom clearfix">
             <div class="copyright">
-                {{$madrasah->nama}} | <strong><span>2020</span></strong>. All Rights Reserved
+                {{$sekolah->nama}} | <strong><span>2020</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->

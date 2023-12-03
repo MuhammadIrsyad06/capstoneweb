@@ -21,7 +21,7 @@ Route::get('/home/berita', 'LeandingPageController@index_berita');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/profilemadrasah', 'ProfileMadrasahController');
+Route::resource('/profile', 'ProfileController');
 Route::resource('/ekstrakulikuler', 'EkstrakulikulerController');
 Route::get('/ekstrakulikuler/{id}/destroy', 'EkstrakulikulerController@destroy');
 Route::resource('/gurutendik', 'GuruTendikController');

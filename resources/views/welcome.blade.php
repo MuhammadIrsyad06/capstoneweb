@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>{{$profile_madrasah->nama}} | Leanding Page</title>
+  <title>{{$profile->nama}} | Leanding Page</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -34,8 +34,8 @@
     <div class="container d-flex align-items-center">
 
       <a class="navbar-brand mr-auto" href="#">
-        <img src="{{URL::to('/')}}/logo_madrasah/{{$profile_madrasah->logo}}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-        {{$profile_madrasah->nama}}
+        <img src="{{URL::to('/')}}/logo/{{$profile->logo}}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        {{$profile->nama}}
       </a>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -44,7 +44,7 @@
           <li><a href="#berita">Berita</a></li>
           <li class="drop-down"><a href="#">Profile</a>
             <ul>
-              <li><a href="#profile_madrasah">Profile Sekolah</a></li>
+              <li><a href="#profile">Profile Sekolah</a></li>
               <li><a href="#ekstrakulikuler">Ekstrakulikuler</a></li>
               <li><a href="#gtk">Guru & Tenaga Kependidikan</a></li>
             </ul>
@@ -75,16 +75,16 @@
           <h1>Selamat Datang</h1>
 
           @if ($informasi_pendaftaran->status==1)
-          <h2>Di Website {{$profile_madrasah->nama}}, untuk pendaftaran peserta didik baru silahkan klik tombol daftar dibawah.</h2>
+          <h2>Di Website {{$profile->nama}}, untuk pendaftaran peserta didik baru silahkan klik tombol daftar dibawah.</h2>
           <div class="d-flex">
             <a href="/register" class="btn btn-outline-primary rounded mb-4 shadow  fw-bold" target="">Daftar Sekarang</a>
             <a href="#informasi_pendaftaran" class="btn-watch-video scrollto">Informasi Pendaftaran <i class="icofont-info-circle"></i></a>
           </div>
           @else
-          <h2>Di Website {{$profile_madrasah->nama}}, pendaftaran peserta didik baru <span class="badge badge-danger">Telah Ditutup</span> sampai jumpa pada PPDB tahun depan.</h2>
+          <h2>Di Website {{$profile->nama}}, pendaftaran peserta didik baru <span class="badge badge-danger">Telah Ditutup</span> sampai jumpa pada PPDB tahun depan.</h2>
           @endif
 
-          <!-- <h2>Di Website {{$profile_madrasah->nama}}</h2>
+          <!-- <h2>Di Website {{$profile->nama}}</h2>
           <div class="d-flex">
             <a href="/register" class="btn-get-started scrollto" target="_blank">Daftar Sekarang</a>
           </div> -->
@@ -130,24 +130,24 @@
     </section>
     <!-- End Berita Section -->
 
-    <!-- ======= Profile Madrasah Section ======= -->
-    <section id="profile_madrasah" class="about">
+    <!-- ======= Profile Section ======= -->
+    <section id="profile" class="about">
       <div class="container">
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="{{URL::to('/')}}/gambar_profile/{{$profile_madrasah->gambar}}" class="img-fluid" alt="">
+            <img src="{{URL::to('/')}}/gambar_profile/{{$profile->gambar}}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content">
             <h3>Profil Sekolah</h3>
             <p>
-              {{$profile_madrasah->deskripsi}}
+              {{$profile->deskripsi}}
             </p>
           </div>
         </div>
 
       </div>
-    </section><!-- End Profile Madrasah Section -->
+    </section><!-- End Profile Section -->
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
@@ -156,22 +156,22 @@
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up"> {{$profile_madrasah->jumlah_rombel}}</span>
-            <p>Rombongan Belajar</p>
+            <span data-toggle="counter-up"> {{$profile->jumlah_rombel}}</span>
+            <p>Ruang Kelasr</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up"> {{$profile_madrasah->jumlah_siswa}}</span>
+            <span data-toggle="counter-up"> {{$profile->jumlah_siswa}}</span>
             <p>Siswa</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up"> {{$profile_madrasah->jumlah_guru}}</span>
+            <span data-toggle="counter-up"> {{$profile->jumlah_guru}}</span>
             <p>Guru</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up"> {{$profile_madrasah->jumlah_tendik}}</span>
+            <span data-toggle="counter-up"> {{$profile->jumlah_tendik}}</span>
             <p>Tenaga Kependidikan</p>
           </div>
 
@@ -209,7 +209,7 @@
         <div class="section-title">
           <span>Ekskul</span>
           <h2>Ekskul</h2>
-          <p>Untuk mengembangkan minat dan bakat siswa di {{$profile_madrasah->nama}} terdapat beberapa kegiatan ekstrakulikuler, diantaraya :</p>
+          <p>Untuk mengembangkan minat dan bakat siswa di {{$profile->nama}} terdapat beberapa kegiatan ekstrakulikuler, diantaraya :</p>
         </div>
 
         <div class="row">
